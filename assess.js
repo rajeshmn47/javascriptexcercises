@@ -1,3 +1,4 @@
+const axios =require('axios')
 //Given a string, find the reverse of it.
 arr=[1,2,3,1,3,5,33,1,8,6,1]
 function reversestring(s){
@@ -27,7 +28,7 @@ function requestManager(url, attempts = 3) {
     return new Promise(async (resolve, reject) => {
         for (let i = 0; i < attempts; i++) {
             try {
-                const response = await fetch(url);
+                const response = await axios.get(url);
                 resolve(response);
                 break;
             } catch (err) {
@@ -43,6 +44,6 @@ function requestManager(url, attempts = 3) {
 
 // driver code
 requestManager('https://reqbin.com/echo/get/json', 3).then(
-    response => console.log(response),
+    response => console.log(response.data),
     error => console.log(error)
 );
