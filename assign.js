@@ -1,12 +1,12 @@
 //Given a string, find the reverse of it.
-function reversestring(s){
-    var string=s
-    a=[]
-    for(i=string.length;i>-1;i--){
-        a.push(string[i])
-    }
+//function reversestring(s){
+   // var string=s
+   // a=[]
+   // for(i=string.length;i>-1;i--){
+   //     a.push(string[i])
+   // }
 
-    console.log(a.join(''))
-}
+   // console.log(a.join(''))
+//}
 
-reversestring('phicode')
+//reversestring('phicode')
