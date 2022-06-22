@@ -130,4 +130,13 @@ function asyncFunc() {
     }, 5000);
   }, 10000);
 }
-asyncFunc()
+//asyncFunc()
+const promiseArr = asyncArr.map((async) => async());
+finalResolution = Promise.all(promiseArr);
+finalResolution
+  .then((output) => {
+    for (let data of output) {
+      console.log(data);
+    }
+  })
+  .catch((err) => console.log(err));
