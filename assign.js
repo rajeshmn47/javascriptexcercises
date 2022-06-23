@@ -237,7 +237,12 @@ const arri = [
   //}
 //})
 //console.log([...map.values()])
-const set1 = new Set(...arri);
-const set2 = new Set(...arri);
+ab=[1,3,21,1,2,4,1,2,4]
+ba=[1,3,21,1,2,4,2,1,2,1,2,21,1,2,4]
+const set1 = new Set(ab);
+const set2 = new Set(ba);
 const distinctArr = [...set1, ...set2];
-console.log(distinctArr)
+function getDistinctArray(ab) {
+  return [...new Set(ab)];
+}
+console.log(getDistinctArray(ba))
