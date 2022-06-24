@@ -237,12 +237,24 @@ const arri = [
   //}
 //})
 //console.log([...map.values()])
-ab=[1,3,21,1,2,4,1,2,4]
-ba=[1,3,21,1,2,4,2,1,2,1,2,21,1,2,4]
-const set1 = new Set(ab);
-const set2 = new Set(ba);
-const distinctArr = [...set1, ...set2];
-function getDistinctArray(ab) {
-  return [...new Set(ab)];
-}
-console.log(getDistinctArray(ba))
+//ab=[1,3,21,1,2,4,1,2,4]
+//ba=[1,3,21,1,2,4,2,1,2,1,2,21,1,2,4]
+//const set1 = new Set(ab);
+//const set2 = new Set(ba);
+//const distinctArr = [...set1, ...set2];
+//function getDistinctArray(ab) {
+//  return [...new Set(ab)];
+//}
+//console.log(getDistinctArray(ba))
+const books = [
+  { name: "Harry Potter", author: "Joanne aowling" },
+  { name: "Warcross", author: "carie Lu" },
+  { name: "The Hunger Games", author: "Suzanne zollins" },
+]
+ke=books.sort((book1,book2)=>{
+  const author1=book1.author.split(" ")[0];
+  const author2=book2.author.split(" ")[0];
+  console.log(author1,author2)
+  return author2 > author1 ? -1 : 1;
+})
+console.log(books)
