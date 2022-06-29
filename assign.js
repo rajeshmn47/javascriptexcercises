@@ -257,4 +257,3 @@ ke=books.sort((book1,book2)=>{
   console.log(author1,author2)
   return author2 > author1 ? -1 : 1;
 })
-console.log(books)
